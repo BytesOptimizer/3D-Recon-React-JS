@@ -65,14 +65,15 @@ export const ThreeDViewer = ({ onLoad }) => {
       onDataLoad,
       coordinateSystem: COORDINATE_SYSTEM.CARTESIAN,
       getNormal: d => d.normal,
+      getPosition: d => d.position,
       getColor: (d)=>{
         console.log(d,"color");
         return d.color;
       },
       // getNormal: [0, 1, 0],
       // getColor: [255, 0, 0],
-      opacity: 0.5,
-      pointSize: 0.5,
+      opacity: 1,
+      pointSize: 2,
       // Additional format support can be added here
       loaders: [PLYLoader]
     })
